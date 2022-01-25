@@ -8,7 +8,8 @@ client = Client(
 message = client.messages.create(
     from_="+16065311900",
     to="+12067246799",
-    body="Hello World!",
+    body="Hello World from Python",
     )
 
-print(message.sid)
+
+print(f"Created a new message: {message.sid}")
