@@ -5,5 +5,10 @@ client = Client(
     "TWILIO_AUTH_TOKEN"
     )
 
-for msg in client.messages.list():
-    print(msg.body)
+message = client.messages.create(
+    from_="+16065311900",
+    to="+12067246799",
+    body="Hello World!",
+    )
+
+print(message.sid)
